@@ -3,138 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SERT YAPI | Kurumsal Yapı Sistemleri</title>
+    <title>SERT YAPI | Yapım Aşamasında</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --bg: #050a12;
-            --card-bg: #0d1520;
-            --gold: #d4af37;
-            --text: #e2e8f0;
-            --accent: #1e293b;
-        }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-
-        /* Header */
-        header {
-            padding: 30px;
-            background: rgba(5, 10, 18, 0.95);
-            border-bottom: 2px solid var(--gold);
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo { font-size: 32px; font-weight: 900; color: var(--gold); letter-spacing: 6px; text-transform: uppercase; }
-
-        /* Hero */
-        .hero {
-            height: 50vh;
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0f172a; /* Derin Kurumsal Lacivert */
+            color: #ffffff;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
             text-align: center;
         }
-        .hero h1 { font-size: 48px; border: 2px solid var(--gold); padding: 20px 40px; }
 
-        /* Gallery */
-        .container { max-width: 1300px; margin: 60px auto; padding: 0 20px; }
-        .section-title { font-size: 28px; margin-bottom: 40px; color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 2px; }
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
         }
-        .gallery-item {
-            height: 400px;
-            background: var(--card-bg);
+
+        .logo {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #c5a059; /* İnşaat/Altın Tonu */
+        }
+
+        .divider {
+            width: 60px;
+            height: 4px;
+            background: #c5a059;
+            margin: 20px auto;
+        }
+
+        .status-content {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px 30px;
             border-radius: 4px;
-            overflow: hidden;
-            border: 1px solid var(--accent);
-            transition: 0.4s;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-        .gallery-item:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.4s; }
-        .gallery-item:hover img { opacity: 1; }
 
-        /* Adres Bölümü */
+        .status-content i {
+            font-size: 50px;
+            color: #c5a059;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #94a3b8;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
         .address-box {
-            background: var(--card-bg);
-            margin-top: 80px;
-            padding: 60px;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid var(--accent);
+            margin-top: 40px;
+            font-size: 14px;
+            color: #cbd5e1;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
         }
-        .address-box i { font-size: 40px; color: var(--gold); margin-bottom: 20px; }
-        .address-box h3 { font-size: 24px; margin-bottom: 15px; letter-spacing: 1px; }
-        .address-box p { font-size: 18px; color: #94a3b8; }
 
-        footer { padding: 40px; text-align: center; border-top: 1px solid var(--accent); font-size: 13px; color: #475569; }
+        .address-box strong {
+            display: block;
+            color: #c5a059;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
 
-        @media (max-width: 768px) { .hero h1 { font-size: 28px; } .address-box { padding: 30px; } }
+        @media (max-width: 480px) {
+            .logo { font-size: 32px; letter-spacing: 4px; }
+            h1 { font-size: 20px; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">SERT YAPI</div>
-</header>
-
-<section class="hero">
-    <h1>GÜVEN VE ESTETİK</h1>
-</section>
-
-<div class="container">
-    <h2 class="section-title">PROJE GALERİSİ</h2>
-    <div class="gallery" id="imageGallery">
+    <div class="container">
+        <div class="logo">SERT <span>YAPI</span></div>
+        <div class="divider"></div>
+        
+        <div class="status-content">
+            <i class="fas fa-hard-hat"></i>
+            <h1>Web Sitemiz Yapım Aşamasındadır</h1>
+            <p>Sizlere daha profesyonel bir deneyim sunmak için çalışmalarımız devam ediyor.</p>
+            
+            <div class="address-box">
+                <strong>MERKEZ OFİS</strong>
+                Altınşehir Mahallesi, Gülçin Sokak No:39<br>
+                34494 Başakşehir / İstanbul
+            </div>
         </div>
-
-    <div class="address-box">
-        <i class="fas fa-map-marker-alt"></i>
-        <h3>MERKEZ OFİSİMİZ</h3>
-        <p>Altınşehir Mahallesi, Gülçin Sokak No:39</p>
-        <p>34494 Başakşehir / İstanbul</p>
     </div>
-</div>
-
-<footer>
-    &copy; 2026 SERT YAPI - TÜM HAKLARI SAKLIDIR.
-</footer>
-
-<script>
-    // Drive linklerini doğrudan resim linkine çeviren liste
-    const driveLinks = [
-        "https://drive.google.com/file/d/1stkk4jcr-5q0hGfUXGdTnWT2YW9IGNo6/view",
-        "https://drive.google.com/file/d/1nMeIVe9k1hDLjulnyQhc0FQShfCz2yJK/view",
-        "https://drive.google.com/file/d/1emZNZnRRy63GqWBXEw7wbV69Y-NSSCN9/view",
-        "https://drive.google.com/file/d/1a8O-T6zqL5dR7PC-DckuYHbxz3irl60h/view",
-        "https://drive.google.com/file/d/1JLdv_tzIDjqQMJfK445Eu9VlH1HIrJOq/view",
-        "https://drive.google.com/file/d/1aWm9ibSxv9Vr80PYpWQmiWhBrCJymwPW/view",
-        "https://drive.google.com/file/d/1vWEuTXJcncfpp9231ZLQmS6riE_WGK6H/view",
-        "https://drive.google.com/file/d/1mXQylrEvOujgjTKujRnBj2Gh01PTxjWQ/view"
-    ];
-
-    const gallery = document.getElementById('imageGallery');
-
-    driveLinks.forEach(link => {
-        // Linkten ID kısmını ayıklar
-        const fileId = link.match(/[-\w]{25,}/);
-        if (fileId) {
-            const directLink = `https://lh3.googleusercontent.com/d/${fileId}`;
-            const item = document.createElement('div');
-            item.className = 'gallery-item';
-            item.innerHTML = `<img src="${directLink}" onerror="this.src='https://via.placeholder.com/400x400/0d1520/c5a059?text=Resim+Yuklenemedi'" alt="Sert Yapı Proje">`;
-            gallery.appendChild(item);
-        }
-    });
-</script>
 
 </body>
 </html>
