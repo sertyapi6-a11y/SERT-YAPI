@@ -19,6 +19,23 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; background: var(--dark); color: var(--white); scroll-behavior: smooth; }
 
+        /* --- ÖZEL MAVİ SCROLLBAR --- */
+        ::-webkit-scrollbar {
+            width: 8px; /* Kaydırma çubuğu genişliği */
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--dark); /* Arka plan rengi */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--blue); /* Kaydırma çubuğunun rengi */
+            border-radius: 10px; /* Kenar yuvarlaklığı */
+            border: 2px solid var(--dark); /* Çubuk ile kenar arasında boşluk hissi */
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0052cc; /* Üzerine gelince biraz daha koyu mavi */
+        }
+
+        /* Navbar */
         header {
             position: fixed; width: 100%; height: 110px;
             display: flex; justify-content: space-between; align-items: center;
@@ -37,8 +54,10 @@
         .logo-box span { color: #000; font-weight: 900; font-size: 1.5rem; text-transform: uppercase; letter-spacing: -1px; }
 
         nav ul { display: flex; list-style: none; gap: 30px; }
-        nav ul a { text-decoration: none; color: var(--white); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav ul a { text-decoration: none; color: var(--white); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        nav ul a:hover { color: var(--blue); }
 
+        /* Banner */
         .hero {
             height: 100vh; width: 100%;
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
@@ -49,13 +68,14 @@
         .hero p { font-size: clamp(1rem, 2vw, 1.3rem); max-width: 800px; color: #ccc; margin-bottom: 40px; }
         
         .social-links { display: flex; gap: 20px; }
-        .social-links a {
+        .social-link {
             width: 55px; height: 55px; border: 1.5px solid rgba(255,255,255,0.3);
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
             color: var(--white); text-decoration: none; transition: 0.4s; font-size: 1.3rem;
         }
-        .social-links a:hover { background: var(--blue); border-color: var(--blue); transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,102,255,0.4); }
+        .social-link:hover { background: var(--blue); border-color: var(--blue); transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,102,255,0.4); }
 
+        /* Projeler Bölümü */
         .projects-section { padding: 120px 8%; background: var(--surface); }
         .section-title { text-align: center; margin-bottom: 80px; font-size: 2.5rem; font-weight: 900; text-transform: uppercase; }
 
@@ -89,8 +109,9 @@
         .project-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s ease; }
         .project-card:hover img { transform: scale(1.1); filter: brightness(0.6); }
 
+        /* Footer */
         footer { padding: 80px 8% 40px; background: #000; text-align: center; border-top: 1px solid #111; }
-        .footer-info { margin-bottom: 30px; color: #666; font-size: 1rem; }
+        .footer-info { margin-bottom: 30px; color: #666; font-size: 1rem; line-height: 1.8; }
         .f-bottom { margin-top: 40px; padding-top: 30px; border-top: 1px solid #111; color: #333; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; }
 
         @media (max-width: 768px) {
