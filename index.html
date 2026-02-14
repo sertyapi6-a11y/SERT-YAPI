@@ -17,6 +17,7 @@
             --surface: #0a0a0a;
             --white: #ffffff;
             --text-gray: #71717a;
+            --whatsapp: #25d366;
         }
 
         /* --- TEMEL AYARLAR --- */
@@ -68,7 +69,8 @@
             display: grid; place-items: center; 
             color: var(--white); text-decoration: none; transition: 0.4s; font-size: 1.5rem;
         }
-        .social-link:hover { background: var(--blue); border-color: var(--blue); transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,102,255,0.4); }
+        .social-link.instagram:hover { background: #e1306c; border-color: #e1306c; transform: translateY(-8px); }
+        .social-link.whatsapp:hover { background: var(--whatsapp); border-color: var(--whatsapp); transform: translateY(-8px); }
 
         /* --- PROJELER --- */
         .projects-section { padding: 120px 8%; background: var(--surface); }
@@ -83,10 +85,11 @@
         .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 60px; margin-bottom: 50px; }
         .footer-info h4 { margin-bottom: 25px; color: var(--blue); text-transform: uppercase; letter-spacing: 1px; font-weight: 900; }
         .footer-info p { color: var(--text-gray); font-size: 1rem; line-height: 1.8; margin-bottom: 12px; }
+        .footer-info a { color: var(--text-gray); text-decoration: none; transition: 0.3s; }
+        .footer-info a:hover { color: var(--blue); }
         
         .f-bottom { border-top: 1px solid #111; padding-top: 40px; text-align: center; font-size: 0.85rem; color: #333; font-weight: 700; letter-spacing: 2px; }
 
-        /* --- MOBİL UYUMLULUK --- */
         @media (max-width: 768px) {
             header { height: 100px; }
             .logo-box { padding: 10px 20px; }
@@ -117,9 +120,8 @@
         <h1>GÜÇLÜ YAPI<br><span style="color: var(--blue);">SAĞLAM GELECEK</span></h1>
         <p>Sert Yapı olarak mühendislikte mükemmelliği ve mimaride estetiği birleştiriyoruz.</p>
         <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/sert_yapi_gayrimenkul/" target="_blank" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/905325995814" target="_blank" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
         </div>
     </section>
 
@@ -149,14 +151,14 @@
             <div class="footer-info">
                 <h4>BİZE ULAŞIN</h4>
                 <p>Altınşehir Mah. Gülçin Sok. No: 39/41 İç Kapı No: 2, Başakşehir / İSTANBUL</p>
-                <p>info@sertyapi.com | +90 (212) 000 00 00</p>
+                <p><a href="tel:+905325995814">0532 599 58 14</a></p>
+                <p><a href="mailto:sertyapi.cengizsert@gmail.com">sertyapi.cengizsert@gmail.com</a></p>
             </div>
             <div class="footer-info">
                 <h4>TAKİP EDİN</h4>
                 <div class="social-links" style="justify-content: flex-start;">
-                    <a href="#" class="social-link" style="width:45px; height:45px; font-size:1.1rem;"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link" style="width:45px; height:45px; font-size:1.1rem;"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-link" style="width:45px; height:45px; font-size:1.1rem;"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/sert_yapi_gayrimenkul/" target="_blank" class="social-link instagram" style="width:45px; height:45px; font-size:1.1rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/905325995814" target="_blank" class="social-link whatsapp" style="width:45px; height:45px; font-size:1.1rem;"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
