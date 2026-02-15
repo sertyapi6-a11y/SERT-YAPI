@@ -20,16 +20,13 @@
             --whatsapp: #25d366;
         }
 
-        /* --- TEMEL AYARLAR --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; background: var(--dark); color: var(--white); scroll-behavior: smooth; overflow-x: hidden; }
 
-        /* --- ÖZEL MAVİ SCROLLBAR --- */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: var(--dark); }
         ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 10px; border: 3px solid var(--dark); }
 
-        /* --- NAVIGASYON --- */
         header {
             position: fixed; width: 100%; height: 130px;
             display: flex; justify-content: space-between; align-items: center;
@@ -39,30 +36,58 @@
 
         .logo-box {
             background: var(--white);
-            padding: 15px 35px;
+            padding: 15px 30px;
             border-radius: 6px;
             display: flex; align-items: center; gap: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
-        .logo-box img { height: 80px; width: auto; object-fit: contain; }
-        .logo-box span { color: #000; font-weight: 900; font-size: 1.8rem; text-transform: uppercase; letter-spacing: -1px; }
+        .logo-box img { height: 75px; width: auto; object-fit: contain; }
+        
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .logo-text-group span.brand-name { 
+            color: #000; 
+            font-weight: 900; 
+            font-size: 1.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        /* İstediğin Kalın Font Ayarı */
+        .logo-text-group span.brand-slogan { 
+            color: #222; 
+            font-weight: 700; /* Kalınlaştırıldı */
+            font-size: 0.8rem; 
+            margin-top: 4px;
+            letter-spacing: 0.2px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
 
         nav ul { display: flex; list-style: none; gap: 35px; }
         nav ul a { text-decoration: none; color: var(--white); font-weight: 700; font-size: 1rem; text-transform: uppercase; transition: 0.3s; }
         nav ul a:hover { color: var(--blue); }
 
-        /* --- BANNER --- */
         .hero {
             height: 100vh; width: 100%;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
                         url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070') center/cover;
             display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
         }
-        .hero h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
-        .hero p { font-size: 1.2rem; max-width: 800px; color: #ccc; margin-bottom: 45px; padding: 0 20px; }
         
-        /* --- SOSYAL MEDYA İKONLARI --- */
-        .social-links { display: flex; gap: 20px; justify-content: center; align-items: center; }
+        .hero h1 { 
+            font-size: clamp(3rem, 10vw, 6rem); 
+            font-weight: 900; 
+            line-height: 1.1; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .social-links { margin-top: 40px; display: flex; gap: 20px; justify-content: center; align-items: center; }
         .social-link {
             width: 60px; height: 60px; border: 2px solid rgba(255,255,255,0.3);
             border-radius: 50%; 
@@ -72,7 +97,6 @@
         .social-link.instagram:hover { background: #e1306c; border-color: #e1306c; transform: translateY(-8px); }
         .social-link.whatsapp:hover { background: var(--whatsapp); border-color: var(--whatsapp); transform: translateY(-8px); }
 
-        /* --- PROJELER --- */
         .projects-section { padding: 120px 8%; background: var(--surface); }
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
         .project-card { position: relative; height: 500px; overflow: hidden; border-radius: 8px; background: #111; }
@@ -80,7 +104,6 @@
         .project-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s ease; }
         .project-card:hover img { transform: scale(1.1); filter: brightness(0.6); }
 
-        /* --- KURUMSAL FOOTER --- */
         footer { background: #050505; padding: 100px 8% 40px; border-top: 1px solid #111; }
         .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 60px; margin-bottom: 50px; }
         .footer-info h4 { margin-bottom: 25px; color: var(--blue); text-transform: uppercase; letter-spacing: 1px; font-weight: 900; }
@@ -94,9 +117,10 @@
             header { height: 100px; }
             .logo-box { padding: 10px 20px; }
             .logo-box img { height: 50px; }
-            .logo-box span { font-size: 1.2rem; }
+            .logo-text-group span.brand-name { font-size: 1.2rem; }
+            .logo-text-group span.brand-slogan { font-size: 0.6rem; }
             nav { display: none; }
-            .hero h1 { font-size: 2.8rem; }
+            .hero h1 { font-size: 3.5rem; }
         }
     </style>
 </head>
@@ -105,7 +129,10 @@
     <header>
         <div class="logo-box">
             <img src="https://drive.google.com/thumbnail?id=1EYHszvJkEq_Eh7DCuD_ei9ylnqJfYyNB&sz=w400" alt="Sert Yapı Logo">
-            <span>SERT YAPI</span>
+            <div class="logo-text-group">
+                <span class="brand-name">SERT YAPI</span>
+                <span class="brand-slogan">Hayallerinizi<br>İnşa Edin</span>
+            </div>
         </div>
         <nav>
             <ul>
@@ -117,8 +144,12 @@
     </header>
 
     <section class="hero" id="home">
-        <h1>GÜÇLÜ YAPI<br><span style="color: var(--blue);">SAĞLAM GELECEK</span></h1>
-        <p>Sert Yapı olarak mühendislikte mükemmelliği ve mimaride estetiği birleştiriyoruz.</p>
+        <h1>
+            GÜÇLÜ<br>
+            SAĞLAM<br>
+            <span style="color: var(--blue);">GELECEK</span>
+        </h1>
+        
         <div class="social-links">
             <a href="https://www.instagram.com/sert_yapi_gayrimenkul/" target="_blank" class="social-link instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://wa.me/905325995814" target="_blank" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
@@ -146,7 +177,7 @@
         <div class="footer-container">
             <div class="footer-info">
                 <h4>SERT YAPI İNŞAAT</h4>
-                <p>Güven ve kaliteyi temel alan mühendislik çözümlerimizle, geleceğin modern şehirlerini bugünden inşa ediyoruz.</p>
+                <p>Güven ve kaliteyi temel alan mühendislik çözümlerimizle geleceği inşa ediyoruz.</p>
             </div>
             <div class="footer-info">
                 <h4>BİZE ULAŞIN</h4>
@@ -156,7 +187,7 @@
             </div>
             <div class="footer-info">
                 <h4>TAKİP EDİN</h4>
-                <div class="social-links" style="justify-content: flex-start;">
+                <div class="social-links" style="justify-content: flex-start; margin-top: 10px;">
                     <a href="https://www.instagram.com/sert_yapi_gayrimenkul/" target="_blank" class="social-link instagram" style="width:45px; height:45px; font-size:1.1rem;"><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/905325995814" target="_blank" class="social-link whatsapp" style="width:45px; height:45px; font-size:1.1rem;"><i class="fab fa-whatsapp"></i></a>
                 </div>
