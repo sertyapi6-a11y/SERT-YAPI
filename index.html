@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sert Yapı | Kurumsal</title>
     
-    <link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=1EYHszvJkEq_Eh7DCuD_ei9ylnqJfYyNB&sz=w32">
+    <link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=1wHRzpYFpiQf2cDTij77rsvfS2IELlyzW&sz=w32">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,7 +28,8 @@
         ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 10px; border: 3px solid var(--dark); }
 
         header {
-            position: fixed; width: 100%; height: 130px;
+            position: fixed; width: 100%; 
+            height: 150px; 
             display: flex; justify-content: space-between; align-items: center;
             padding: 0 5%; background: rgba(0,0,0,0.9); backdrop-filter: blur(15px);
             z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -36,36 +37,33 @@
 
         .logo-box {
             background: var(--white);
-            padding: 15px 30px;
-            border-radius: 6px;
-            display: flex; align-items: center; gap: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            padding: 20px 35px; 
+            border-radius: 8px;
+            display: flex; align-items: center; gap: 25px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.6);
+            transition: transform 0.3s ease;
         }
-        .logo-box img { height: 75px; width: auto; object-fit: contain; }
         
-        .logo-text-group {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        .logo-box:hover { transform: scale(1.03); }
+
+        .logo-box img { 
+            height: 90px; 
+            width: auto; 
+            object-fit: contain; 
         }
+        
+        .logo-text-group { display: flex; flex-direction: column; justify-content: center; }
+        
         .logo-text-group span.brand-name { 
-            color: #000; 
-            font-weight: 900; 
-            font-size: 1.8rem; 
-            text-transform: uppercase; 
-            letter-spacing: -1px;
-            line-height: 1;
+            color: #000; font-weight: 900; 
+            font-size: 2.2rem; 
+            text-transform: uppercase; letter-spacing: -1px; line-height: 0.9;
         }
 
-        /* İstediğin Kalın Font Ayarı */
         .logo-text-group span.brand-slogan { 
-            color: #222; 
-            font-weight: 700; /* Kalınlaştırıldı */
-            font-size: 0.8rem; 
-            margin-top: 4px;
-            letter-spacing: 0.2px;
-            line-height: 1.2;
-            text-transform: uppercase;
+            color: #222; font-weight: 700; 
+            font-size: 0.9rem; 
+            margin-top: 6px; letter-spacing: 0.2px; line-height: 1.2; text-transform: uppercase;
         }
 
         nav ul { display: flex; list-style: none; gap: 35px; }
@@ -74,24 +72,24 @@
 
         .hero {
             height: 100vh; width: 100%;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), 
                         url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070') center/cover;
             display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            padding-top: 100px;
         }
         
-        .hero h1 { 
-            font-size: clamp(3rem, 10vw, 6rem); 
+        .hero .main-title { 
+            font-size: clamp(2.5rem, 8vw, 5rem); 
             font-weight: 900; 
-            line-height: 1.1; 
+            line-height: 1.0; 
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: -1px;
         }
 
         .social-links { margin-top: 40px; display: flex; gap: 20px; justify-content: center; align-items: center; }
         .social-link {
             width: 60px; height: 60px; border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 50%; 
-            display: grid; place-items: center; 
+            border-radius: 50%; display: grid; place-items: center; 
             color: var(--white); text-decoration: none; transition: 0.4s; font-size: 1.5rem;
         }
         .social-link.instagram:hover { background: #e1306c; border-color: #e1306c; transform: translateY(-8px); }
@@ -114,13 +112,13 @@
         .f-bottom { border-top: 1px solid #111; padding-top: 40px; text-align: center; font-size: 0.85rem; color: #333; font-weight: 700; letter-spacing: 2px; }
 
         @media (max-width: 768px) {
-            header { height: 100px; }
-            .logo-box { padding: 10px 20px; }
-            .logo-box img { height: 50px; }
-            .logo-text-group span.brand-name { font-size: 1.2rem; }
+            header { height: 110px; }
+            .logo-box { padding: 12px 18px; gap: 12px; }
+            .logo-box img { height: 55px; }
+            .logo-text-group span.brand-name { font-size: 1.3rem; }
             .logo-text-group span.brand-slogan { font-size: 0.6rem; }
             nav { display: none; }
-            .hero h1 { font-size: 3.5rem; }
+            .hero .main-title { font-size: 3rem; }
         }
     </style>
 </head>
@@ -128,7 +126,7 @@
 
     <header>
         <div class="logo-box">
-            <img src="https://drive.google.com/thumbnail?id=1EYHszvJkEq_Eh7DCuD_ei9ylnqJfYyNB&sz=w400" alt="Sert Yapı Logo">
+            <img src="https://drive.google.com/thumbnail?id=1wHRzpYFpiQf2cDTij77rsvfS2IELlyzW&sz=w800" alt="Sert Yapı Logo">
             <div class="logo-text-group">
                 <span class="brand-name">SERT YAPI</span>
                 <span class="brand-slogan">Hayallerinizi<br>İnşa Edin</span>
@@ -144,11 +142,12 @@
     </header>
 
     <section class="hero" id="home">
-        <h1>
+        <div class="main-title">
             GÜÇLÜ<br>
             SAĞLAM<br>
-            <span style="color: var(--blue);">GELECEK</span>
-        </h1>
+            GELECEK<br>
+            <span style="color: var(--blue);">İÇİN</span>
+        </div>
         
         <div class="social-links">
             <a href="https://www.instagram.com/sert_yapi_gayrimenkul/" target="_blank" class="social-link instagram"><i class="fab fa-instagram"></i></a>
@@ -160,7 +159,7 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-number">PROJE 01</div>
-                <img src="https://drive.google.com/thumbnail?id=1stkk4jcr-5q0hGfUXGdTnWT2YW9IGNo6&sz=w1000" alt="Proje 1">
+                <img src="https://drive.google.com/thumbnail?id=1IohYMtNACIZQBK9JquNhoVwvT0CPfckv&sz=w1000" alt="Proje 1">
             </div>
             <div class="project-card">
                 <div class="project-number">PROJE 02</div>
