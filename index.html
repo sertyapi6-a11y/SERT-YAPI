@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sert Yapı | Kurumsal</title>
     
-    <link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=1JbhHO--j-UZC3aOhU8PkSv2eIv1mXMPl&sz=w64">
+    <link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=1D2uJpKArDmWjCL9KDljYM4Kevt1sgOoQ&sz=w64">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -35,29 +35,36 @@
             z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
+        /* LOGO KISMI DÜZELTME */
         .logo-box {
-            background: var(--white);
-            padding: 20px 35px; 
-            border-radius: 8px;
-            display: flex; align-items: center; gap: 25px;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.6);
+            /* Beyaz arka planı ve gölgeyi kaldırdık */
+            background: none;
+            padding: 0; 
+            border-radius: 0;
+            display: flex; align-items: center; gap: 20px;
+            box-shadow: none;
             transition: transform 0.3s ease;
         }
         
         .logo-box:hover { transform: scale(1.03); }
 
-        .logo-box img { height: 90px; width: auto; object-fit: contain; }
+        /* Yeni logoya göre boyutu ayarladık */
+        .logo-box img { height: 110px; width: auto; object-fit: contain; }
         
         .logo-text-group { display: flex; flex-direction: column; justify-content: center; }
         
         .logo-text-group span.brand-name { 
-            color: #000; font-weight: 900; 
+            /* Yazı rengini beyaz yaptık (çünkü arka plan artık koyu) */
+            color: var(--white); 
+            font-weight: 900; 
             font-size: 2.2rem; 
             text-transform: uppercase; letter-spacing: -1px; line-height: 0.9;
         }
 
         .logo-text-group span.brand-slogan { 
-            color: #222; font-weight: 700; 
+            /* Slogan rengini gri yaptık */
+            color: var(--text-gray); 
+            font-weight: 700; 
             font-size: 0.9rem; 
             margin-top: 6px; letter-spacing: 0.2px; line-height: 1.2; text-transform: uppercase;
         }
@@ -112,7 +119,6 @@
             object-fit: contain;
         }
 
-        /* Video Alanı Tasarımı */
         .video-wrapper {
             width: 100%;
             margin-bottom: 40px;
@@ -125,7 +131,7 @@
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Oranı */
+            padding-bottom: 56.25%; 
             height: 0;
         }
 
@@ -149,10 +155,10 @@
 
         @media (max-width: 768px) {
             header { height: 110px; }
-            .logo-box { padding: 12px 18px; gap: 12px; }
-            .logo-box img { height: 55px; }
-            .logo-text-group span.brand-name { font-size: 1.3rem; }
-            .logo-text-group span.brand-slogan { font-size: 0.6rem; }
+            .logo-box { gap: 12px; }
+            .logo-box img { height: 65px; } /* Mobil boyutu ayarlandı */
+            .logo-text-group span.brand-name { font-size: 1.3rem; color: white; }
+            .logo-text-group span.brand-slogan { font-size: 0.6rem; color: var(--text-gray); }
             nav { display: none; }
             .hero .main-title { font-size: 3rem; }
             .project-card { height: 350px; }
@@ -163,7 +169,7 @@
 
     <header>
         <div class="logo-box">
-            <img src="https://drive.google.com/thumbnail?id=1wHRzpYFpiQf2cDTij77rsvfS2IELlyzW&sz=w800" alt="Sert Yapı Logo">
+            <img src="https://drive.google.com/thumbnail?id=1D2uJpKArDmWjCL9KDljYM4Kevt1sgOoQ&sz=w800" alt="Sert Yapı Logo">
             <div class="logo-text-group">
                 <span class="brand-name">SERT YAPI</span>
                 <span class="brand-slogan">Hayallerinizi<br>İnşa Edin</span>
